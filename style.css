@@ -9,6 +9,11 @@ body {
   margin: 100px auto;
 }
 
+#change-colour-option {
+  display: flex;
+  justify-content: space-between;
+}
+
 #grid-container {
   display: flex;
   flex-wrap: wrap;

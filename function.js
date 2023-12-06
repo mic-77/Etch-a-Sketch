@@ -13,7 +13,18 @@ const createGridbtn = document.getElementById("btnForCreateGrid");
 gridContainer.style.width = gridContainer.style.height = `${GRIDSIZE}px`;
 
 function setBGC() {
-  this.style.backgroundColor = "black";
+  function getRandomRGBValue() {
+    return Math.floor(Math.random() * 256);
+  }
+
+  function randomizeRGB() {
+    const red = getRandomRGBValue();
+    const green = getRandomRGBValue();
+    const blue = getRandomRGBValue();
+    return `rgb(${red}, ${green}, ${blue})`;
+  }
+  const randomColour = randomizeRGB();
+  this.style.backgroundColor = randomColour;
 }
 
 function createGridCells(squaresPerSide) {
